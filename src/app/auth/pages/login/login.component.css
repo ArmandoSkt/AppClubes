@@ -1,0 +1,82 @@
+section{
+    max-width: 45rem;
+    margin: 7rem auto;
+    background-color: var(--color-titulos);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.titulo {
+    background-color: var(--color-primario);
+    padding: 1.5rem;
+}
+
+.titulo h2 {
+    color: var(--color-blanco);
+    text-align: center;
+    font-weight: var(--fw-regular);
+}
+
+.logo {
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 4px solid var(--color-blanco);
+    margin: 0 1rem;
+}
+
+.logo i{ 
+    font-size:10rem;
+    padding:0;
+    color: var(--color-blanco);
+}
+
+form {
+    padding: 2rem 5rem;
+}
+
+input {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding:1rem;
+}
+
+input:hover {
+    outline: 1px solid #fff;
+}
+
+input:focus {
+    outline: 3px solid var(--color-terceario);
+}
+
+
+select {
+    margin-top: 2rem;
+    width: 11rem;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+button {
+    display: block;
+    width: 15rem;
+    padding: .7rem;
+    background-color: var(--color-boton);
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--color-blanco);
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: var(--color-botonAlp)
+}
+

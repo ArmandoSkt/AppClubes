@@ -1,0 +1,203 @@
+<form autocomplete="off" class="formulario" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+    <!-- Grupo: Folio -->
+    <div class="formulario__grupo" id="grupo__folio">
+        <label for="int_folio" class="formulario__label">N° de folio de la ficha</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="int_folio" id="int_folio">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El folio solo debe contener numeros y 4 digitos.</p>
+    </div>
+
+    <!-- Grupo: Nombre -->
+    <div class="formulario__grupo" id="grupo__nombre">
+        <label for="txt_nombre" class="formulario__label">Nombre</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="txt_nombre" id="txt_nombre">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El nombre solo debe contener letras.</p>
+    </div>
+
+    <!-- Grupo: Apellidos -->
+    <div class="formulario__grupo" id="grupo__apellidos">
+        <label for="txt_apellidos" class="formulario__label">Apellidos</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="txt_apellidos" id="txt_apellidos">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El apellido solo debe contener letras.</p>
+    </div>
+
+    <!-- Grupo: Teléfono -->
+    <div class="formulario__grupo" id="grupo__telefono">
+        <label for="txt_telefono" class="formulario__label">Teléfono</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="txt_telefono" id="txt_telefono">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 10 dígitos.
+        </p>
+    </div>
+
+    <!-- Grupo: Correo Electronico -->
+    <div class="formulario__grupo" id="grupo__correo">
+        <label for="txt_correo" class="formulario__label">Correo Electrónico</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="txt_correo" id="txt_correo">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones, guion bajo y en el formato correcto.</p>
+    </div>
+
+    <!-- Grupo: Carrera -->
+    <div class="formulario__grupo" id="grupo__carrera">
+        <label for="lst_carrera" class="formulario__label">Carrera</label>
+        <div class="formulario__grupo-input">
+            <select class="formulario__input form-select" name="lst_carrera" id="txt_carrera">
+                <option disabled selected>--- Seleccione ---</option>
+                <option>ING. EN SISTEMAS COMPUTACIONALES</option>
+                <option>ING. EN MECATRÓNICA</option>
+                <option>ING. EN GESTIÓN EMPRESARIAL</option>
+                <option>ING. INDUSTRIAL</option>
+                <option>ING. EN BIOQUÍMICA</option>
+                <option>ING. EN NANOTECNOLOGIA</option>
+                <option>ING. TICS</option>
+            </select>
+        </div>
+        <p class="formulario__input-error">El grupo debe contener solo 5 caracteres, y en el formato adecuado.
+        </p>
+    </div>
+
+    <!-- Grupo: Dirección -->
+    <div class="formulario__grupo" id="grupo__direccion">
+        <label for="txt_direccion" class="formulario__label">Dirección</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="txt_direccion" id="txt_direccion">
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El domicilio es obligatorio.</p>
+    </div>
+
+
+    <!-- Grupo: Genero -->
+    <div class="formulario__grupo" id="grupo__genero">
+        <label for="mas" class="formulario__label">Genero</label>
+        <div class="formulario__grupo-input gen">
+            <input type="radio" name="txt_genero" id="M" value="M"><span> M </span>
+            <input type="radio" name="txt_genero" id="F" value="F"><span> F </span>
+        </div>
+        <p class="formulario__input-error">Debe elegir una opcion.</p>
+    </div>
+
+    <!-- Grupo: whatsapp -->
+    <div class="formulario__grupo" id="grupo__whats">
+        <label for="rd_whats" class="formulario__label">¿Cuentas con WhatsApp?</label>
+        <div class="formulario__grupo-input gen">
+            <input type="radio" name="txt_whats" id="si" value="SI"><span> SI </span>
+            <input type="radio" name="txt_whats" id="no" value="NO"><span> NO </span>
+        </div>
+        <p class="formulario__input-error">Debe elegir una opcion.</p>
+    </div>
+
+    <!-- Grupo: Club -->
+    <div class="formulario__grupo" id="grupo__club">
+        <label for="lst_club" class="formulario__label">Elige el club de tu interes</label>
+        <div class="formulario__grupo-input">
+            <select class="formulario__input" name="lst_club" id="txt_club">
+                <option disabled selected>--- Seleccione ---</option>
+                <option>BASQUETBOL</option>
+                <option>BEISBOL</option>
+                <option>FUTBOL SOCCER VARONIL</option>
+                <option>FUTBOL SOCCER FEMENIL</option>
+                <option>ATLETISMO</option>
+                <option>VOLEIBOL DE SALA Y PLAYA VARONIL</option>
+                <option>VOLEIBOL DE SALA Y PLAYA FEMENIL</option>
+                <option>TAE-KWON-DO</option>
+                <option>AJEDREZ</option>
+                <option>BOX</option>
+                <option>SOFBOL</option>
+                <option>MÚSICA RONDALLA</option>
+                <option>BANDA DE GUERRA</option>
+                <option>ESCOLTA</option>
+                <option>PINTURA</option>
+                <option>MÚSICA VERSÁTIL</option>
+                <option>DANZA FOLKLÓRICA</option>
+                <option>BAILE MODERNO</option>
+                <option>LECTURA</option>
+                <option>DESARROLLO SUSTENTABLE</option>
+                <option>SHG: HW, SW Y GAMING</option>
+                <option>COMUNICACIÓN (RADIO)</option>
+                <option>PROGRAMACIÓN</option>
+            </select>
+        </div>
+        <p class="formulario__input-error">El grupo debe contener solo 5 caracteres, y en el formato adecuado.
+        </p>
+    </div>
+
+    <!-- Grupo: Club2 -->
+    <div class="formulario__grupo" id="grupo__club2">
+        <label for="lst_club2" class="formulario__label">Elige tú segunda opcion de un club</label>
+        <div class="formulario__grupo-input">
+            <select class="formulario__input" name="lst_club2" id="txt_club2">
+                <option disabled selected>--- Seleccione ---</option>
+                <option>BASQUETBOL</option>
+                <option>BEISBOL</option>
+                <option>FUTBOL SOCCER VARONIL</option>
+                <option>FUTBOL SOCCER FEMENIL</option>
+                <option>ATLETISMO</option>
+                <option>VOLEIBOL DE SALA Y PLAYA VARONIL</option>
+                <option>VOLEIBOL DE SALA Y PLAYA FEMENIL</option>
+                <option>TAE-KWON-DO</option>
+                <option>AJEDREZ</option>
+                <option>BOX</option>
+                <option>SOFBOL</option>
+                <option>MÚSICA RONDALLA</option>
+                <option>BANDA DE GUERRA</option>
+                <option>ESCOLTA</option>
+                <option>PINTURA</option>
+                <option>MÚSICA VERSÁTIL</option>
+                <option>DANZA FOLKLÓRICA</option>
+                <option>BAILE MODERNO</option>
+                <option>LECTURA</option>
+                <option>DESARROLLO SUSTENTABLE</option>
+                <option>SHG: HW, SW Y GAMING</option>
+                <option>COMUNICACIÓN (RADIO)</option>
+                <option>PROGRAMACIÓN</option>
+            </select>
+        </div>
+        <p class="formulario__input-error">El grupo debe contener solo 5 caracteres, y en el formato adecuado.
+        </p>
+    </div>
+
+    <!-- Grupo: Alergias -->
+    <div class="formulario__grupo" id="grupo__alergia">
+        <label for="txt_alergia" class="formulario__label">¿Tienes alguna alergia? <br> (describe-las)</label>
+        <div class="formulario__grupo-input">
+            <textarea class="formulario__input estilotextarea" name="txt_alergia" id="txt_alergia"></textarea>
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El nombre solo debe contener letras.</p>
+    </div>
+
+    <!-- Grupo: Alergias -->
+    <div class="formulario__grupo" id="grupo__situacionMedica">
+        <label for="txt_situacionMedica" class="formulario__label">Alguna situación medica (lesión u operación
+            de las cuales requiera saber tu instructor)</label>
+        <div class="formulario__grupo-input">
+            <textarea class="formulario__input estilotextarea" name="txt_situacionMedica" id="txt_situacionMedica"></textarea>
+            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+        </div>
+        <p class="formulario__input-error">El nombre solo debe contener letras.</p>
+    </div>
+
+
+    <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+    </div>
+
+    <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <button type="submit" class="formulario__btn">Registrar</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+    </div>
+</form>

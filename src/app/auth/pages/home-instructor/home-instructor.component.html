@@ -1,0 +1,51 @@
+<section class="container">
+    <h2 class="centrar-texto mb-5 texto-pag">Bienvenido {{nombre |titlecase }}</h2>
+    <div class="row">        
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h3 class="mb-4">Lista de alumnos:</h3>
+            <table class="table table-striped table-dark table-hover col-6"
+                *ngIf="alumnos.length>0">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Carrera</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let alumno of alumnos; let i= index" (click)="mostrar(alumno)"
+                  data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                  class="color-tabla">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{ alumno.nombre|titlecase }}</td>
+                    <td>{{ alumno.apellidos|titlecase }}</td>
+                    <td>{{ alumno.carrera|titlecase }}</td>
+                  </tr>                  
+                </tbody>
+              </table>
+        </div>
+          <div class="col-2"></div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel">Datos del alumno:</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><b>Telefono:</b> {{ alumnoDatos.telefono }}</p>
+          <p><b>Correo:</b> {{ alumnoDatos.correo|lowercase }}</p>
+          <p><b>Edad:</b> {{ alumnoDatos.edad }}</p>
+          <p><b>Sexo:</b> {{ alumnoDatos.sexo }}</p>
+          <p><b>Alergias:</b> {{ alumnoDatos.alergias }}</p>
+          <p><b>Situación medica:</b> {{ alumnoDatos.situacion_medica }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

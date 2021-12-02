@@ -1,0 +1,18 @@
+<main>
+    <h2 class="texto-pag">{{ club.nombre|titlecase}}</h2>
+    <section class="presentacion">
+        <div class="video">
+            <!-- <iframe width="100%" height="100%" [src]="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <iframe width="100%" height="100%" [src]="getVideoIframe(club.video || '')" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="datos">
+            <h3><b>Intructor:</b>{{ club.instructor|titlecase }}</h3>
+            <button class="boton">Inscribir</button>
+        </div>
+    </section>
+
+   
+        
+</main>

@@ -1,1 +1,213 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primario: #1B396A;
+    --color-primarioAlp: #1B396A;
+    --color-secundario: #2F65BD;
+    --color-secundarioAlp: #2457aa;
+    --color-terceario: #85AFF2;
+    --color-tercearioAlp: #5a89d3;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --color-boton: #509EE3;
+    --color-botonAlp: rgb(64, 125, 179);
+    --color-gris-claro: #F3F3F3;
+    --color-gris-medio: #cacaca;
+    --color-gris-oscuro: #666666;
+    --fuentePrincipal: 'Rubik', sans-serif;
+    --color-input: #d3dbe9;
+    --color-titulos: #50668c;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-bold:600;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, a:after {
+    box-sizing: inherit;    
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    background-color:#f3f3f3;
+    
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor-flex{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.estirar{
+    flex-grow: 1;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.round {
+    border-radius:.5rem;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.texto-pag {
+    margin-top:5rem;
+    
+}
+
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--color-blanco);
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: var(--fw-bold);
+}
+
+h3{
+    font-size: 2.4rem;
+    font-weight: var(--fw-medium);
+    color: var(--color-titulos);
+}
+
+h4{
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: var(--fw-regular);
+}
+
+.contenedor {
+    max-width: 1200px;
+}
+
+.section {
+    margin-top: 10rem;
+}
+
+.contenedor-clubes{ 
+    margin-bottom: 5rem;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.centrar-caja {
+    margin: auto;
+}
+
+.header {
+    background-color: var(--color-primario);
+    z-index: 1020;
+    box-shadow: 0 0px 5px .2px var(--color-gris-medio) ;
+}
+
+.navBar {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size:2rem;
+    background-color: #fff;
+}
+
+.nav li a {
+    font-size: 1.7rem;
+    font-weight: var(--fw-medium);
+    color: var(--color-blanco);
+}
+
+.nav li a:hover {
+    transform: scale(1.1);
+    color: var(--color-botonAlp)
+}
+
+.contenedor__imagen {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.65),  rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)), url("./assets/fondo.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__imagen h2 {
+    margin-top: -10rem;
+    color: var(--color-blanco);
+    font-weight: var(--fw-bold);
+    transform: scale(1.3);
+    animation: moveTop 1.5s linear;
+}
+
+@keyframes moveTop {
+    0% { 
+        transform: scale(.8)
+    }
+    80% { 
+        transform: scale(1.4)
+    }
+    100% { 
+        transform: scale(1.3)
+    }
+}
+
+
+.card-club {
+    background-color: #f5f5f5;
+    outline: 2px solid var(--color-gris-medio);   
+}
+
+.card-club:hover {
+    /* box-shadow: 1px 1px 2px 3px var(--color-gris-oscuro); */
+    outline: 4px solid var(--color-gris-medio);
+}
+
+.boton {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: var(--fw-bold);
+    padding: .7rem 0;
+    text-align: center;
+    border-radius: .5rem;  
+    text-decoration: none; 
+    border: none; 
+}
+
+.boton-club {
+    margin: 2rem 2rem .5rem;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.boton-club:hover {
+    background-color: var(--color-botonAlp);
+    color: var(--color-blanco);
+}
+
+
+ 
+
+
+

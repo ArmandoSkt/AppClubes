@@ -1,0 +1,20 @@
+.contenedor-tabla{
+    padding: 0 5rem;
+}
+
+.table th {
+    font-size: 1.8rem;
+    font-weight: var(--fw-medium);
+    text-align:center;    
+}
+
+.table td {
+    font-size: 1.6rem;
+    text-align:center;
+    cursor: pointer;
+}
+
+ /* .color-tabla > *{
+    background-color: var(--color-primario)!important;
+} */
+

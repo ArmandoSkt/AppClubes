@@ -1,0 +1,8 @@
+<div class="card-club m-2 mb-5 round overflow">
+    <img [src]="club | imagen" class="img-club" alt="...">
+    <div class="card-body">
+      <h3 class="mb-3 mt-2">{{club.nombre |titlecase}}</h3>
+      <p> <b>Instructor:</b> {{club.instructor |titlecase}}</p>
+      <a class="boton boton-club" [routerLink]="['/presentacion', club.id]">Ver Club</a>
+    </div>
+</div>

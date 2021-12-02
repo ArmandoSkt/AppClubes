@@ -1,0 +1,42 @@
+<main>
+    <section>
+        <div class="titulo">
+            <h2>Login</h2>
+        </div>
+        <div>
+            <div class="logo">
+                <i class="bi bi-person"></i>
+            </div>
+
+            <form>
+                <div class=" mb-5 mt-3">
+                    <input type="text" 
+                        class="form-control" 
+                        id="id" 
+                        placeholder="Ingresa tu id" 
+                        name="id"
+                        [(ngModel)]="id">
+                </div>
+                  
+                <div class=" mb-3 ">
+                    <input type="password" 
+                        class="form-control" 
+                        id="pwd" 
+                        name="pwd"
+                        placeholder="Ingresa tu contraseña" 
+                        [(ngModel)]="pwd">
+                </div>
+
+                <!-- <select name="login-id">
+                    <option>Instructor</option>
+                    <option>Admin</option>
+                </select> -->
+
+                <button class="mt-5 mb-3"
+                (click)="login()">
+                    INGRESAR
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
