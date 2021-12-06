@@ -1,3 +1,5 @@
+<app-navbar class="sticky-top"></app-navbar>
+
 <main>
     <h2 class="texto-pag">{{ club.nombre|titlecase}}</h2>
     <section class="presentacion">
@@ -8,8 +10,8 @@
             gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="datos">
-            <h3><b>Intructor:</b>{{ club.instructor|titlecase }}</h3>
-            <button class="boton">Inscribir</button>
+            <h3><b>Intructor: </b> {{ club.instructor|titlecase }}</h3>
+            <button class="boton" (click)="cambiar()">Inscribir</button>
         </div>
     </section>
 

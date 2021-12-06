@@ -12,21 +12,18 @@ export class HomeInstructorComponent implements OnInit {
   alumnos: Alumnos[] = [];
   alumnoDatos: Alumnos = {};
   nombreInstructor: string = "";
-  nombre: string ="";
   mostrarVentana:boolean = false
+  token: string = ""
 
   constructor( private authService: AuthService) { }
   
   ngOnInit(): void {    
 
     this.idInstructor = localStorage.getItem("id") || "";    
-
-    this.authService.getInstructor(Number(this.idInstructor))
-    .subscribe( instructor => {
-      this.nombre = instructor.nombre || "";
-    })
-
-    this.authService.getAlumnosInstructor(Number(this.idInstructor))
+    this.nombreInstructor = localStorage.getItem("nombre") || "";
+    this.token = localStorage.getItem("token") || "";
+    
+    this.authService.gAlumnosInstructor(Number(this.idInstructor), this.token)
       .subscribe( alumnos =>{
         console.log();
         
@@ -35,8 +32,7 @@ export class HomeInstructorComponent implements OnInit {
   }
 
   mostrar(alumno: Alumnos) {
-    this.alumnoDatos = alumno;
-    
+    this.alumnoDatos = alumno;    
   }
 
 }

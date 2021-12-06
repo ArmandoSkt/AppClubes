@@ -9,3 +9,7 @@
 .link-nav:hover {
     color: var(--color-gris-medio);
 }
+
+.modal-body p{
+    font-weight: var(--fw-medio);
+}

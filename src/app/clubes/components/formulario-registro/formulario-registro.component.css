@@ -41,8 +41,9 @@
     height: 3.5rem;
     padding: 0 3rem 0 1rem;
     transition: .1s ease all;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: var(--fw-regular);
+    letter-spacing: .7px;
 }
 
 .recortar {
@@ -55,14 +56,11 @@
 }
 
 .formulario__input-error {
-    font-size: 1.2rem;
     margin-bottom: 0;
     display: none;
+    color: #bb2929;
 }
 
-.formulario__input-error-activo {
-    display: block;
-}
 
 .formulario__validacion-estado {
     position: absolute;
@@ -75,6 +73,10 @@
 
 .ajustar-icono {
     right: 52%;
+}
+
+.input-error {
+    outline: 2px solid #bb2929;
 }
 
 .formulario__grupo-input.gen span {
@@ -171,4 +173,30 @@ select:focus {
 
 .formulario__mensaje-exito-activo {
     display: block;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__input-error {
+    display: block;
+}
+
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: .3rem solid #bb2929;
+}
+.alert {
+    width: 50%;
 }

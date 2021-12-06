@@ -1,34 +1,40 @@
 
 
-<div class="container-fluid contenedor__imagen">
-    <h2>BIENVENIDOS A LOS CLUBES</h2>
-</div>
+<app-navbar class="sticky-top"></app-navbar>
 
-<main class="container-xl">
-    <section class="section">
-        <h2 class="centrar-texto mb-5">Clubes deportivos</h2>
-        <section class="row contenedor-clubes">
-            <div class="col-4 " *ngFor="let clube of clubesDeportivos">
-                <app-card-club [club]="clube"></app-card-club>
-            </div>
-            
-        </section>    
-
-        <h2 class="centrar-texto mb-5">Clubes culturales</h2>
-        <section class="row contenedor-clubes">
-            <div class="col-4" *ngFor="let clube of clubesCulturales">
-                <app-card-club [club]="clube"></app-card-club>
-            </div>
-            
-        </section>
-
-        <h2 class="centrar-texto mb-5">Clubes academicos</h2>
-        <section class="row contenedor-clubes">
-            <div class="col-4" *ngFor="let clube of clubesAcademicos">
-                <app-card-club [club]="clube"></app-card-club>
-            </div>
-            
+<main >
+    <div class="container-fluid contenedor__imagen">
+        <h2 class="mb-5">BIENVENIDOS A LOS CLUBES</h2>
+        <div class="jaguar">
+            <img src="../../../../assets/iconojaguarChibi.png" alt="">
+        </div>
+    </div>
+    
+    <section class="container-xl">
+        <section class="section">
+            <h2 class="centrar-texto mb-5">Clubes deportivos</h2>
+            <section class="row contenedor-clubes">
+                <div class="col-4 " *ngFor="let clube of clubesDeportivos">
+                    <app-card-club [club]="clube"></app-card-club>
+                </div>
+                
+            </section>    
+    
+            <h2 class="centrar-texto mb-5">Clubes culturales</h2>
+            <section class="row contenedor-clubes">
+                <div class="col-4" *ngFor="let clube of clubesCulturales">
+                    <app-card-club [club]="clube"></app-card-club>
+                </div>
+                
+            </section>
+    
+            <!-- <h2 class="centrar-texto mb-5">Clubes academicos</h2>
+            <section class="row contenedor-clubes">
+                <div class="col-4" *ngFor="let clube of clubesAcademicos">
+                    <app-card-club [club]="clube"></app-card-club>
+                </div>
+                
+            </section> -->
         </section>
     </section>
 </main>
-

@@ -26,24 +26,19 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.id, this.pwd)
       .subscribe(
         (resp:any) => {
-          this.authService.setCuenta(resp.id.id, resp.id.rol, resp.id.nombre, resp.token)
-          console.log(resp);
+          // console.log(resp);
           
-          this.msg.success("Usuario correcto")
+          this.authService.setCuenta(resp.id.id, resp.id.usuario, resp.id.nombre, resp.id.rol, resp.token)
+          
+          // this.msg.success("Usuario correcto")
           if(resp.id.rol == "A"){
-            this.clubesService.navegacionInstructores = false                   
-            console.log(this.clubesService.navegacionInstructores);
             this.router.navigate(["/admin"]) 
-          }else {
-            this.clubesService.navegacionInstructores = false    
-            console.log(this.clubesService.navegacionInstructores);
-                           
+          }else {                           
             this.router.navigate(["/instructor"])          
           }
           
         }, err => {
-          this.msg.error("Usuario o contraseña incorrectos")
-          
+          this.msg.error("<h4>Usuario o contraseña incorrectos</h4>")  
         }
       )
   }  

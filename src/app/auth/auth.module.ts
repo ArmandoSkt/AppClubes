@@ -9,12 +9,13 @@ import { HomeInstructorComponent } from './pages/home-instructor/home-instructor
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { ClubesModule } from '../clubes/clubes.module';
 
 @NgModule({
   declarations: [
     LoginComponent,
     HomeInstructorComponent,
-    HomeAdminComponent,
+    HomeAdminComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +23,11 @@ import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      enableHtml: true
+    }),
+    ClubesModule
   ],
   exports: [
     LoginComponent,

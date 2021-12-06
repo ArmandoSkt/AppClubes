@@ -14,6 +14,27 @@
     cursor: pointer;
 }
 
+#cabecera {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.color-tabla > tr:nth-child(odd)>td,
+.color-tabla > tr:nth-child(odd)>th {
+    background-color: var(--color-blanco)
+}
+
+.color-tabla > tr:hover > td ,
+.color-tabla > tr:hover > th {
+    background-color: var(--color-gris)
+}
+.color-tabla > tr:nth-child(even)>td,
+.color-tabla > tr:nth-child(even)>th {
+   
+    background-color: #d1e2fa
+}
+
+
  /* .color-tabla > *{
     background-color: var(--color-primario)!important;
 } */

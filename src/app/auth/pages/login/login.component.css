@@ -1,5 +1,5 @@
 section{
-    max-width: 45rem;
+    max-width: 40rem;
     margin: 7rem auto;
     background-color: var(--color-titulos);
     border-radius: 1rem;
@@ -39,6 +39,8 @@ input {
     border: none;
     outline: none;
     padding:1rem;
+    font-weight: var(--fw-bold);
+    letter-spacing:1px
 }
 
 input:hover {

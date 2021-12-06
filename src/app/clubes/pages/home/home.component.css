@@ -1,0 +1,42 @@
+.jaguar {
+    width:14rem;
+    height:14rem;
+    background-color: rgba(255, 255, 255, 0.762);
+    text-align: center;
+    border-radius: 50%;
+    line-height: 14rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    animation:crecer 1s linear;
+}
+
+img{
+    width:6rem;
+    animation: mov 2s linear infinite;    
+}
+
+@keyframes mov {
+    /* 0% {
+        transform: rotate(0deg);
+    } */
+    25% {
+        transform: rotate(-5deg);
+    }
+    
+    75% {
+        transform: rotate(5deg);
+    }
+    /* 100% {
+        transform: rotate(0deg);
+    } */
+
+    /* 100% {
+        transform: rotate(0deg);
+    } */
+}
+
+@keyframes crecer {
+    0% {transform: scale(.5)}
+    100% {transform: scale(1)}
+}

@@ -3,7 +3,7 @@ import { Clubes } from '../../interfaces/clubes.interface';
 import { ClubesService } from '../../services/clubes.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { switchMap } from 'rxjs/operators'
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-presentacion',
@@ -19,7 +19,8 @@ export class PresentacionComponent implements OnInit {
    
   constructor( private clubesService: ClubesService,
               private _sanitizer: DomSanitizer,
-              private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
 
@@ -44,7 +45,11 @@ export class PresentacionComponent implements OnInit {
     video   = (results === null) ? url : results[1];
  
     return this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video);   
-}
+  }
+
+  cambiar() {
+    this.router.navigate(["/registro"]) 
+  }
 
 
 }

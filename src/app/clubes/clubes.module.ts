@@ -11,6 +11,7 @@ import { PresentacionComponent } from './pages/presentacion/presentacion.compone
 import { NavbarInstructoresComponent } from './components/navbar-instructores/navbar-instructores.component';
 import { FormularioRegistroComponent } from './components/formulario-registro/formulario-registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -30,12 +31,13 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
-    NavbarInstructoresComponent
+    NavbarInstructoresComponent,
   ]
 })
 export class ClubesModule { }
